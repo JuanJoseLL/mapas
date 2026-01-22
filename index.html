@@ -7,12 +7,18 @@
     <style>
         body {
             font-family: system-ui, sans-serif;
-            max-width: 600px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background: #f5f5f5;
         }
-        h1 { color: #333; }
+        h1 { color: #333; text-align: center; }
+        h2 { color: #555; margin-top: 30px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
         ul { list-style: none; padding: 0; }
         li { margin: 10px 0; }
         a {
@@ -23,20 +29,54 @@
             text-decoration: none;
             color: #0066cc;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background 0.2s;
         }
         a:hover { background: #e8f4ff; }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .badge-mediana { background: #dbeafe; color: #1e40af; }
+        .badge-media { background: #fef3c7; color: #92400e; }
+        .description {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
     <h1>Mapas de Escenarios de Dengue</h1>
-    <ul>
-        <li><a href="mapa_escenarios_dengue.html">Escenario Base</a></li>
-        <li><a href="mapa_escenarios_dengue_intermitencia_agua.html">Intermitencia de Agua</a></li>
-        <li><a href="mapa_escenarios_dengue_lluvias_intensas.html">Lluvias Intensas</a></li>
-        <li><a href="mapa_escenarios_dengue_movilidad_eventos.html">Movilidad y Eventos</a></li>
-        <li><a href="mapa_escenarios_dengue_saturacion_operativa.html">Saturación Operativa</a></li>
-        <li><a href="mapa_escenarios_dengue_todos_criticos.html">Todos Críticos</a></li>
-        <li><a href="mapa_escenarios_dengue_todos_verdes.html">Todos Verdes</a></li>
-    </ul>
+
+    <h2>Factores con Medianas</h2>
+    <p class="description">Mapas generados usando la mediana de los factores por estrategia</p>
+    <div class="grid">
+        <a href="mapa_escenarios_dengue.html">Escenario Base <span class="badge badge-mediana">Mediana</span></a>
+        <a href="mapa_escenarios_dengue_intermitencia_agua.html">Intermitencia de Agua</a>
+        <a href="mapa_escenarios_dengue_lluvias_intensas.html">Lluvias Intensas</a>
+        <a href="mapa_escenarios_dengue_movilidad_eventos.html">Movilidad y Eventos</a>
+        <a href="mapa_escenarios_dengue_saturacion_operativa.html">Saturación Operativa</a>
+        <a href="mapa_escenarios_dengue_todos_criticos.html">Todos Críticos</a>
+        <a href="mapa_escenarios_dengue_todos_verdes.html">Todos Verdes</a>
+    </div>
+
+    <h2>Factores con Medias</h2>
+    <p class="description">Mapas generados usando la media de los factores por estrategia</p>
+    <div class="grid">
+        <a href="mapa_escenarios_dengue_medias.html">Escenario Base <span class="badge badge-media">Media</span></a>
+        <a href="mapa_escenarios_dengue_intermitencia_agua_medias.html">Intermitencia de Agua</a>
+        <a href="mapa_escenarios_dengue_lluvias_intensas_medias.html">Lluvias Intensas</a>
+        <a href="mapa_escenarios_dengue_movilidad_eventos_medias.html">Movilidad y Eventos</a>
+        <a href="mapa_escenarios_dengue_saturacion_operativa_medias.html">Saturación Operativa</a>
+        <a href="mapa_escenarios_dengue_todos_criticos_medias.html">Todos Críticos</a>
+        <a href="mapa_escenarios_dengue_todos_verdes_medias.html">Todos Verdes</a>
+    </div>
 </body>
 </html>
