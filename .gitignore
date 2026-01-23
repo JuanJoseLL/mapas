@@ -1,0 +1,38 @@
+# Excel files (data inputs - managed separately)
+*.xlsx
+
+# Cali folder (shapefiles/data)
+cali/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated reports
+reporte_mcda_*.md
+reporte_escenario_*.md
+reporte_comparativo_*.md
+
+# Generated maps (optional - uncomment if you don't want to track them)
+# mapa_escenarios_*.html
+
+# Logs
+*.log
+tmp_*.log
